@@ -1,11 +1,16 @@
 server:
   port: 5000
 
+spring:
+  application:
+    name: job-portal-api-gateway
+
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
-    server-url:
-      defaultZone: http://localhost:8761/eureka/
+    service-url:
+      defaultZone: http://discovery:8761/eureka/
+
   instance:
     prefer-ip-address: true
