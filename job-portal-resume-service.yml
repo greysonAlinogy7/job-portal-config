@@ -11,7 +11,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/job-portal-resume
     username: postgres
-    password: ${DB_PASSWORD}
+    password: Alinogy7
     driver-class-name: org.postgresql.Driver
 
   jpa:
