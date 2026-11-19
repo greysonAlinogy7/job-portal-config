@@ -1,18 +1,17 @@
-
 server:
   port: 5004
+
 
 spring:
   application:
     name: job-portal-resume-service
 
-  config:
-    import: "configserver:${CONFIG_SERVER_URL:http://localhost:8888}"
+
 
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/job-portal-resume}
-    username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:Alinogy7}
+    url: jdbc:postgresql://localhost:5432/job-portal-resume
+    username: postgres
+    password: Alinogy7
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -23,13 +22,11 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
-
+      defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
